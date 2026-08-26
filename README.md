@@ -1,16 +1,17 @@
-## Hi there 👋
+# Lillecap – preferred landing page
 
-<!--
-**Lillecap/lillecap** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Minimal static website based on the preferred Lillecap visual.
 
-Here are some ideas to get you started:
+- `index.html` – homepage
+- `style.css` – layout and styling
+- `impressum.html` – legal page template
+- `datenschutz.html` – privacy page template
+- `assets/fabric-background.png` – darkened fabric background
+- `assets/lillecap-overlay.png` – transparent Lillecap artwork without the baked-in inquiry text
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+The inquiry button opens `mailto:info@lillecap.com` with subject `Lillecap Anfrage`.
+
+Before publishing, replace the placeholders in the legal pages with the final business/contact details and verify the privacy text against the actual hosting/e-mail setup.
+
+
+Aktualisiert: Logos im Overlay leicht nach oben verschoben; Impressum mit info@lillecap.com, ohne Telefonnummer und mit USt-IdNr. DE414559622; Datenschutz mit info@lillecap.com.

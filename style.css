@@ -1,0 +1,124 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: #080808;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #a8a8a8;
+}
+
+.landing {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  aspect-ratio: 1582 / 2047;
+  overflow: hidden;
+  background: #080808 url("assets/fabric-background.png") center top / 100% 100% no-repeat;
+}
+
+.visual {
+  position: absolute;
+  inset: 0;
+  width: 79.58%;
+  height: auto;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* The visible button is HTML, so it is actually clickable.
+   The baked-in text from the artwork was removed from the overlay. */
+.inquiry {
+  position: absolute;
+  top: 2.25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 315px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+  border: 1px solid #9b9b9b;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.12);
+  color: #a8a8a8;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  z-index: 5;
+  transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.inquiry span { color: #777; }
+
+.inquiry:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #d0d0d0;
+  border-color: #c0c0c0;
+  transform: translateX(-50%) translateY(-1px);
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: #080808;
+  white-space: nowrap;
+  z-index: 10;
+  font-size: clamp(10px, 1vw, 16px);
+  letter-spacing: 0.06em;
+}
+
+.footer a {
+  color: #8d8d8d;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.footer a:hover { color: #c2c2c2; }
+.footer span { color: #666; }
+
+@media (min-width: 1600px) {
+  .landing {
+    max-width: 1582px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing { min-height: 100svh; }
+
+  .inquiry {
+    width: 46%;
+    height: auto;
+    min-height: 40px;
+    padding: 9px 10px;
+    border-radius: 10px;
+    font-size: clamp(9px, 2.7vw, 14px);
+    gap: .45em;
+  }
+
+  .footer {
+    min-height: 58px;
+    gap: 12px;
+    font-size: clamp(8px, 2.2vw, 12px);
+  }
+}
+
+@media (max-height: 650px) {
+  .landing { min-height: 760px; }
+}
